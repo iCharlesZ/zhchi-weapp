@@ -1,0 +1,8 @@
+<import src="../../template/scrollView/scrollView.wxml" />
+
+<scroll-view class='scrollView' scroll-y>
+  <!-- 循环打印模板 -->
+  <view wx:for="{{ listData }}" bindtap='itemOnClick' data-id="{{item.id}}" class='itemView' wx:key="{{index}}">
+    <template is="scrollViewList" data="{{ item }}" />
+  </view>
+</scroll-view>
