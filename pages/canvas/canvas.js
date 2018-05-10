@@ -1,51 +1,40 @@
 Page({
   onReady: function () {
-    this.position = {
-      x: 0,
-      y: 0,
-      vx: 3,
-      vy: 2
-    }
-
-    this.drawBall()
-    this.interval = setInterval(this.drawBall, 17)
+	this.draw;
+	this.interval = setInterval(this.draw, 17);
+	this.position = {
+		rad: 0,
+		add: Math.PI / 45
+	}
   },
-  drawBall: function () {
-    var p = this.position
-    p.x += p.vx
-    p.y += p.vy
-    if (p.x >= 300) {
-      p.vx = -2
-    }
-    if (p.x <= 7) {
-      p.vx = 2
-    }
-    if (p.y >= 300) {
-      p.vy = -2
-    }
-    if (p.y <= 7) {
-      p.vy = 2
-    }
+  draw: function () {
+    var context = wx.createContext();
+	var p = this.position;
+	p.rad += p.add;
 
-    var context = wx.createContext()
-
-    function ball(x, y) {
-      context.beginPath(0)
-      context.arc(x, y, 5, 0, Math.PI * 2)
-      // context.setFillStyle('#1aad19')
-      // context.setStrokeStyle('rgba(1,1,1,0)')
-      context.fill()
-      context.stroke()
-    }
-
-    ball(p.x, p.y)
+	function nose(context, x, y, a, b, O, rad) {
+		var step = (a > b) ? 1 / a : 1 / b;
+		context.beginPath();
+		context.setStrokeStyle('#DE7EAE');
+		for (var i = 0; i < rad; i += step) {
+			context.lineTo(
+				x + a * Math.cos(i) * Math.cos(O) - b * Math.sin(i) * Math.sin(O),
+				y + a * Math.cos(i) * Math.sin(O) + b * Math.sin(i) * Math.cos(O)
+			);
+		}
+		context.stroke();
+	}
+	nose(context, 50, 100, 20, 30, 0.4, p.rad);
+	if (p.rad > 2 * Math.PI) {
+		clearInterval(this.interval);
+		context.setFillStyle('#F69FD2');
+		context.fill();
+		context.closePath();
+	}
 
     wx.drawCanvas({
       canvasId: 'canvas',
       actions: context.getActions()
     })
-  },
-  onUnload: function () {
-    clearInterval(this.interval)
   }
 })
