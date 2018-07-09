@@ -1,2 +1,5 @@
 <!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class='kong'>
+	<text>购物车是空的</text>
+</view>
+
