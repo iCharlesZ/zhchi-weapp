@@ -1,5 +1,10 @@
 <!--index.wxml-->
 <view class="main">
+	<view class="search-content">
+		<image src="/image/search-pic.png" class="search-icon" />
+		<input placeholder="请输入搜索内容" class="search-input" />
+		<button class='search-btn' bindtap="toSearch">搜索</button>
+    </view>
 	<swiper  class="swiper" indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
         <block wx:for="{{imgUrls}}" wx:key="{{index}}">
             <swiper-item>
@@ -7,4 +12,51 @@
             </swiper-item>
         </block>
     </swiper>
+	<view class="newest">
+		<view class="newest-title"><text>最近新品</text></view>
+		<view class="newest-box">
+            <view class="newest-list">
+                <navigator url="/pages/detail/detail">
+                    <image src="/image/s1.png"></image>
+                    <view class="newest-text"><text>水果</text></view>
+                    <view class="newest-text"><text>￥100</text></view>
+                </navigator>
+            </view>
+			<view class="newest-list">
+                <navigator url="/pages/detail/detail">
+                    <image src="/image/s1.png"></image>
+                    <view class="newest-text"><text>水果</text></view>
+                    <view class="newest-text"><text>￥100</text></view>
+                </navigator>
+            </view>
+			<view class="newest-list">
+                <navigator url="/pages/detail/detail">
+                    <image src="/image/s1.png"></image>
+                    <view class="newest-text"><text>水果</text></view>
+                    <view class="newest-text"><text>￥100</text></view>
+                </navigator>
+            </view>
+			<view class="newest-list">
+                <navigator url="/pages/detail/detail">
+                    <image src="/image/s1.png"></image>
+                    <view class="newest-text"><text>水果</text></view>
+                    <view class="newest-text"><text>￥100</text></view>
+                </navigator>
+            </view>
+			<view class="newest-list">
+                <navigator url="/pages/detail/detail">
+                    <image src="/image/s1.png"></image>
+                    <view class="newest-text"><text>水果</text></view>
+                    <view class="newest-text"><text>￥100</text></view>
+                </navigator>
+            </view>
+			<view class="newest-list">
+                <navigator url="/pages/detail/detail">
+                    <image src="/image/s1.png"></image>
+                    <view class="newest-text"><text>水果</text></view>
+                    <view class="newest-text"><text>￥100</text></view>
+                </navigator>
+            </view>
+		</view>
+	</view>
 </view>

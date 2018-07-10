@@ -10,7 +10,8 @@
         "pages/cart/cart",
         "pages/user/user",
         "pages/category/category",
-        "pages/authorize/authorize"
+        "pages/authorize/authorize",
+		"pages/detail/detail"
     ],
     "window": {
         "backgroundTextStyle": "light",
