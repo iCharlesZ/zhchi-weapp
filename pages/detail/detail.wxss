@@ -63,6 +63,20 @@
   color:#000000;
   padding: 30rpx;
 }
+.goods-text{
+  padding: 0 10rpx;
+  font-size:28rpx;
+  color:#666666;
+  line-height: 56rpx;
+  margin-bottom: 30rpx;
+}
+.goods-des-info-img {
+	width: 90%;
+	margin: 5%;
+}
+.goods-des-info-img image {
+	width: 100%;
+}
 
 
 

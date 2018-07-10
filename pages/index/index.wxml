@@ -1,62 +1,53 @@
 <!--index.wxml-->
 <view class="main">
-	<view class="search-content">
-		<image src="/image/search-pic.png" class="search-icon" />
-		<input placeholder="请输入搜索内容" class="search-input" />
-		<button class='search-btn' bindtap="toSearch">搜索</button>
-    </view>
-	<swiper  class="swiper" indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+	<view class="search-view">
+		<view class="search-content">
+			<image src="/image/search-pic.png" class="search-icon" />
+			<input placeholder="请输入搜索内容" class="search-input" />
+			<button class='search-btn' bindtap="toSearch">搜索</button>
+		</view>
+	</view>
+	<swiper 
+		class="swiper" 
+		indicator-dots="{{indicatorDots}}" 
+		autoplay="{{autoplay}}" 
+		interval="{{interval}}" 
+		duration="{{duration}}" 
+		circular="{{circular}}">
         <block wx:for="{{imgUrls}}" wx:key="{{index}}">
             <swiper-item>
-                <image src="{{item.url}}" class="slide-image" width="100%"/>
+                <image src="{{item.url}}"/>
             </swiper-item>
         </block>
     </swiper>
+
+	<view class='hotIcon'>
+		<block wx:for="{{hotIcon}}" wx:key="{{index}}">
+			<view class='icon'>
+				<image src='{{hotIcon[index].img}}'></image>
+				<text>{{hotIcon[index].text}}</text>
+			</view>
+		</block>
+	</view>
+
 	<view class="newest">
-		<view class="newest-title"><text>最近新品</text></view>
+		<view class="newest-title">
+			<text>{{newestTitle}}</text>
+		</view>
 		<view class="newest-box">
-            <view class="newest-list">
-                <navigator url="/pages/detail/detail">
-                    <image src="/image/s1.png"></image>
-                    <view class="newest-text"><text>水果</text></view>
-                    <view class="newest-text"><text>￥100</text></view>
-                </navigator>
-            </view>
-			<view class="newest-list">
-                <navigator url="/pages/detail/detail">
-                    <image src="/image/s1.png"></image>
-                    <view class="newest-text"><text>水果</text></view>
-                    <view class="newest-text"><text>￥100</text></view>
-                </navigator>
-            </view>
-			<view class="newest-list">
-                <navigator url="/pages/detail/detail">
-                    <image src="/image/s1.png"></image>
-                    <view class="newest-text"><text>水果</text></view>
-                    <view class="newest-text"><text>￥100</text></view>
-                </navigator>
-            </view>
-			<view class="newest-list">
-                <navigator url="/pages/detail/detail">
-                    <image src="/image/s1.png"></image>
-                    <view class="newest-text"><text>水果</text></view>
-                    <view class="newest-text"><text>￥100</text></view>
-                </navigator>
-            </view>
-			<view class="newest-list">
-                <navigator url="/pages/detail/detail">
-                    <image src="/image/s1.png"></image>
-                    <view class="newest-text"><text>水果</text></view>
-                    <view class="newest-text"><text>￥100</text></view>
-                </navigator>
-            </view>
-			<view class="newest-list">
-                <navigator url="/pages/detail/detail">
-                    <image src="/image/s1.png"></image>
-                    <view class="newest-text"><text>水果</text></view>
-                    <view class="newest-text"><text>￥100</text></view>
-                </navigator>
-            </view>
+			<block wx:for="{{newestList}}" wx:key="{{index}}">
+				<view class="newest-list">
+					<navigator url="{{newestList[index].url}}">
+						<image src="{{newestList[index].img}}"></image>
+						<view class="newest-text">
+							<text>{{newestList[index].newestText}}</text>
+						</view>
+						<view class="newest-text2">
+							<text>{{newestList[index].newestText2}}</text>
+						</view>
+					</navigator>
+				</view>
+			</block>
 		</view>
 	</view>
 </view>
