@@ -10,94 +10,40 @@ Page({
 			{
 				"id": "option1",
 				"banner": "/image/list1.png",
-				"cate": "option1",
+				"cate": "选项1",
 				"detail": [
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					}
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"}
 				]
 			},
 			{
 				"id": "option2",
 				"banner": "/image/list1.png",
-				"cate": "option2",
+				"cate": "选项2",
 				"detail": [
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					}
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"}
 				]
 			},
 			{
 				"id": "option3",
 				"banner": "/image/list1.png",
-				"cate": "option3",
+				"cate": "选项3",
 				"detail": [
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					},
-					{
-						"thumb": "/image/s1.png",
-						"name": "水果"
-					}
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"},
+					{"thumb": "/image/s1.png","name": "水果"}
 				]
 			}
 		],
@@ -108,15 +54,6 @@ Page({
 	
 	onReady() {
 		var self = this;
-		// wx.request({
-		// 	url: 'http://www.gdfengshuo.com/api/wx/cate-detail.txt',
-		// 	success(res) {
-		// 		self.setData({
-		// 			detail: res.data
-		// 		})
-		// 	}
-		// });
-
 	},
 
 	switchTab(e) {
