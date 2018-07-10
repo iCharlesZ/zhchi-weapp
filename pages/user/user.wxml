@@ -1,1 +1,18 @@
-<!--pages/user/user.wxml-->
+<view class="container">
+	<view class="userinfo">
+		<image class="userinfo-avatar" src="{{thumb}}" background-size="cover"></image>
+		<text class="userinfo-nickname">{{nickname}}</text>
+	</view>
+	<view class="my-item">
+    	<navigator url="">地址管理</navigator>
+  	</view>
+	<view class="my-item">
+    	<navigator url="">订单管理</navigator>
+  	</view>
+	<view class="my-item">
+    	<navigator url="">关于我们</navigator>
+  	</view>
+	<view class="my-item">
+    	<navigator url="">退出登录</navigator>
+  	</view>
+</view>
