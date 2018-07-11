@@ -7,6 +7,7 @@ Page({
 		buyNumber: 1,
 		buyNumMax: 10,
 		selectSizePrice: 0,
+		shopCarInfo: {},
 		goodsDetail: {
 			"basicInfo": {
 				"pic": "/image/new.jpg",
@@ -42,6 +43,18 @@ Page({
 			]
 		}
 	},
+	onLoad: function () {
+		var that = this;
+		wx.getStorage({
+			key: 'shopCarInfo',
+			success: function (res) {
+				that.setData({
+					shopCarInfo: res.data,
+					shopNum: res.data.shopNum
+				});
+			}
+		})
+	},
 	bindGuiGeTap: function () {
 		this.setData({
 			hideShopPopup: false
@@ -76,8 +89,56 @@ Page({
 			icon: 'success',
 			duration: 2000
 		})
+		var shopCarInfo = this.bulidShopCarInfo();
+
+		this.setData({
+			shopCarInfo: shopCarInfo,
+			shopNum: shopCarInfo.shopNum
+		});
+
+		wx.setStorage({
+			key: 'shopCarInfo',
+			data: shopCarInfo
+		})
+	},
+	bulidShopCarInfo: function () {
+		var shopCarMap = {};
+
+		shopCarMap.pic = "/image/new.jpg";
+		shopCarMap.name = "水果";
+		shopCarMap.price = 100;
+		shopCarMap.number = this.data.buyNumber;
+
+		var shopCarInfo = this.data.shopCarInfo;
+		if (!shopCarInfo.shopNum) {
+			shopCarInfo.shopNum = 0;
+		}
+		shopCarInfo.shopNum = shopCarInfo.shopNum + this.data.buyNumber;
+
+		return shopCarInfo;
 	},
 	buyNow: function() {
 		this.closePopupTap();
+	},
+	numJianTap: function () {
+		if (this.data.buyNumber > this.data.buyNumMin) {
+			var currentNum = this.data.buyNumber;
+			currentNum--;
+			this.setData({
+				buyNumber: currentNum
+			})
+		}
+	},
+	numJiaTap: function () {
+		if (this.data.buyNumber < this.data.buyNumMax) {
+			var currentNum = this.data.buyNumber;
+			currentNum++;
+			this.setData({
+				buyNumber: currentNum
+			})
+		}
+	},
+	labelItemTap: function() {
+
 	}
 })

@@ -51,18 +51,18 @@
 				<block wx:for="{{goodsDetail.properties}}" wx:for-item="items" wx:key="id">
 					<view class="label">{{items.name}}</view> 
 					<view class="label-item-box">
-						<view class="label-item {{item.active ? 'active' : '' }}" wx:for="{{items.option}}" wx:key="id" wx:for-index="idx">{{items.option[idx].name}}</view>
+						<view class="label-item {{item.active ? 'active' : '' }}" wx:for="{{items.option}}" wx:key="id" wx:for-index="idx" bindtap="labelItemTap">{{items.option[idx].name}}</view>
 					</view>
 				</block>
 			</view>
 			<view class="buy-num-box">
 				<view class="num-label">购买数量</view>
 				<view class="num-box">
-					<view class="num-jian {{buyNumber == buyNumMin ? 'hui': ''}}">-</view>
+					<view class="num-jian {{buyNumber == buyNumMin ? 'hui': ''}}" bindtap="numJianTap">-</view>
                     <view class="num-input">
                        <input  type="number" value="{{buyNumber}}" disabled/>
                     </view>
-                    <view class="num-jia {{buyNumber== buyNumMax ? 'hui': ''}}">+</view>
+                    <view class="num-jia {{buyNumber== buyNumMax ? 'hui': ''}} "bindtap="numJiaTap">+</view>
 				</view>
 			</view>
 			<view class="popup-join-btn" wx:if="{{shopType =='addShopCar'}}" bindtap="addShopCar">

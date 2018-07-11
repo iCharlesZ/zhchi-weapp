@@ -25,7 +25,7 @@
 
 	<view class='hotIcon'>
 		<block wx:for="{{hotIcon}}" wx:key="{{index}}">
-			<view class='icon'>
+			<view class='icon' bindtap="{{hotIcon[index].bindtap}}">
 				<image src='{{hotIcon[index].img}}'></image>
 				<text>{{hotIcon[index].text}}</text>
 			</view>

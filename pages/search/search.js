@@ -15,14 +15,14 @@ Page({
 		  {
 			  id: 1,
 			  url: '../detail/detail',
-			  thumb: '/image/s1.png',
+			  thumb: '/image/new.jpg',
 			  title: '水果',
 			  price: 0.01
 		  },
 		  {
 			  id: 2,
 			  url: '../detail/detail',
-			  thumb: '/image/s1.png',
+			  thumb: '/image/new.jpg',
 			  title: '水果',
 			  price: 0.02
 		  }

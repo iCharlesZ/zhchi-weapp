@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
 	data: {
+		signin: 0,
 		imgUrls: [
 			{ url: '/image/swipe1.jpg' },
 			{ url: '/image/swipe2.jpg' },
@@ -16,10 +17,10 @@ Page({
 		duration: 800,
 		circular: true,
 		hotIcon: [
-			{ img: "/image/qiandao.png", text: "签到" },
-			{ img: "/image/quan.png", text: "礼券" },
-			{ img: "/image/kanjia.png", text: "砍价" },
-			{ img: "/image/zhuanlan.png", text: "专栏" }
+			{ img: "/image/qiandao.png", text: "签到", bindtap: "signIn" },
+			{ img: "/image/quan.png", text: "礼券", bindtap: "" },
+			{ img: "/image/kanjia.png", text: "砍价", bindtap: ""},
+			{ img: "/image/zhuanlan.png", text: "专栏", bindtap: "" }
 		],
 		newestTitle: "最近新品",
 		newestList: [
@@ -32,6 +33,24 @@ Page({
 			{ url: "/pages/detail/detail", img: "/image/new.jpg", 
 				newestText: "新品4", newestText2: "性价比最高" }
 		]
+	},
+	signIn: function() {
+		if (this.data.signin == 0) {
+			wx.showToast({
+				title: '签到成功',
+				icon: 'success',
+				duration: 2000
+			})
+			this.setData({
+				signin: 1
+			})
+		} else {
+			wx.showToast({
+				title: '你已经签到过',
+				icon: 'success',
+				duration: 2000
+			})
+		}
 	}
 
 })
