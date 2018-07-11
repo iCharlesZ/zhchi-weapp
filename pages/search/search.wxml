@@ -12,6 +12,9 @@
             <view class="title">
                 <text>搜索记录</text>
             </view>
+			<view class='clearhistory' bindtap="clearhistory">
+				<image src='/image/delete.png'></image>
+			</view>
             <view class="tags">
                 <text wx:for="{{history}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle">{{item}}</text>
             </view>
@@ -27,5 +30,5 @@
 	<view class="keywords" wx:if="{{showKeywords}}">
         <view class="keywords-item" wx:for="{{keywords}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle">{{item}}</view>
     </view>
-	
+
 </view>

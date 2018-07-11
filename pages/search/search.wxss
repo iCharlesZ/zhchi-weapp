@@ -34,6 +34,16 @@
     font-size: 32rpx;
     margin: 30rpx 0;
 }
+.clearhistory {
+	width: 35rpx;
+	height: 35rpx;
+	float: right;
+	margin-top: -55rpx;
+}
+.clearhistory image {
+	width: 35rpx;
+	height: 35rpx;
+}
 .title text{
     padding-right: 30rpx;
     padding-bottom: 10rpx;

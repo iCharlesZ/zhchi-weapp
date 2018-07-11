@@ -124,5 +124,12 @@ Page({
 	  this.setData({
 		  history
 	  });
+  },
+  clearhistory: function() {
+	  this.setData({
+		  history: [],
+		  
+	  })
+	  wx.setStorageSync('history', '')
   }
 })
