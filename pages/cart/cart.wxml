@@ -1,5 +1,8 @@
-<!--pages/cart/cart.wxml-->
-<view class='kong'>
-	<text>购物车是空的</text>
-</view>
+<import src="../../template/template-cart/template-cart.wxml"/>
 
+<view class="cart"> 
+	<template 
+		is="cart-list" 
+		data="{{...goodsList}}">	
+	</template>
+ </view>  

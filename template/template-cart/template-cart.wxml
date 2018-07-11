@@ -1,2 +1,11 @@
-<!--template/template-cart/template-cart.wxml-->
-<text>template/template-cart/template-cart.wxml</text>
+<template name="no-list">
+    <view class="kong">
+        购物车空空如也～
+    </view>
+</template>
+
+<template name="cart-list">
+	<view class="goodsList">
+		<text>有{{list}}件商品</text>	
+	</view>
+</template>

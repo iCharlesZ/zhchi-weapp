@@ -1,1 +1,15 @@
-/* template/template-cart/template-cart.wxss */
+.kong {
+	width: 100%;
+    padding:30rpx 0;
+    height: 40rpx;
+    color: #666;
+    text-align: center;
+}
+
+.goodsList {
+	width: 100%;
+    padding:30rpx 0;
+    height: 40rpx;
+    color: #666;
+    text-align: center;
+}

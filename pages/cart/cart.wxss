@@ -1,5 +1,5 @@
 /* pages/cart/cart.wxss */
-.kong {
+.cart {
 	width: 100%;
     padding:30rpx 0;
     height: 40rpx;
