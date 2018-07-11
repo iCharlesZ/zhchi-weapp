@@ -1,6 +1,6 @@
 <view class="container">
 	<view class="img-container">
-		<image src="/image/s1.png"></image>
+		<image src="/image/new.jpg"></image>
 	</view>
 
 
@@ -15,7 +15,7 @@
         <view class="label-title">商品介绍</view>
 		<view class="goods-text">水果，好吃的水果</view>
 		<view class='goods-des-info-img'>
-			<image src="/image/s1.png"></image>
+			<image src="/image/new.jpg"></image>
 		</view>
     </view>
 
@@ -32,4 +32,45 @@
         <view class="join-shop-cart" bindtap="toAddShopCar">加入购物车</view>
         <view class="now-buy" bindtap="tobuy">立即购买</view>
    </view>
+
+
+	<view class="show-popup" hidden="{{hideShopPopup}}" >
+		<view class="popup-mask" bindtap="closePopupTap"></view>
+		<view class="popup-contents">
+			<view class="pop-goods-info">
+				<view class="pop-img-box">
+                    <image src="{{goodsDetail.basicInfo.pic}}" class="goods-thumbnail"/>
+                </view>
+				<view class="pop-goods-des">
+                    <view class="pop-goods-title">{{goodsDetail.basicInfo.name}}</view>
+                    <view class="pop-goods-price">¥ {{selectSizePrice}}</view>
+                </view>
+                <view class="pop-goods-close" bindtap="closePopupTap"></view>
+			</view>
+			<view class="size-label-box">
+				<block wx:for="{{goodsDetail.properties}}" wx:for-item="items" wx:key="id">
+					<view class="label">{{items.name}}</view> 
+					<view class="label-item-box">
+						<view class="label-item {{item.active ? 'active' : '' }}" wx:for="{{items.option}}" wx:key="id" wx:for-index="idx">{{items.option[idx].name}}</view>
+					</view>
+				</block>
+			</view>
+			<view class="buy-num-box">
+				<view class="num-label">购买数量</view>
+				<view class="num-box">
+					<view class="num-jian {{buyNumber == buyNumMin ? 'hui': ''}}">-</view>
+                    <view class="num-input">
+                       <input  type="number" value="{{buyNumber}}" disabled/>
+                    </view>
+                    <view class="num-jia {{buyNumber== buyNumMax ? 'hui': ''}}">+</view>
+				</view>
+			</view>
+			<view class="popup-join-btn" wx:if="{{shopType =='addShopCar'}}" bindtap="addShopCar">
+				加入购物车
+			</view>
+			<view class="popup-join-btn" wx:if="{{shopType =='tobuy'}}" bindtap="buyNow">
+				立即购买
+			</view>
+		</view>
+	</view>
 </view>

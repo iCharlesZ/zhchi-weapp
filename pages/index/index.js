@@ -5,10 +5,10 @@ const app = getApp()
 Page({
 	data: {
 		imgUrls: [
-			{ url: 'http://lsl.image.alimmdn.com/eye.jpg' },
-			{ url: 'http://lsl.image.alimmdn.com/loginBG.jpg' },
-			{ url: 'http://lsl.image.alimmdn.com/eye.jpg' },
-			{ url: 'http://lsl.image.alimmdn.com/loginBG.jpg' }
+			{ url: '/image/swipe1.jpg' },
+			{ url: '/image/swipe2.jpg' },
+			{ url: '/image/swipe3.jpg' },
+			{ url: '/image/swipe4.jpg' }
 		],
 		indicatorDots: true,
 		autoplay: true,
@@ -23,14 +23,14 @@ Page({
 		],
 		newestTitle: "最近新品",
 		newestList: [
-			{ url:"/pages/detail/detail", img: "/image/s1.png", 
-				newestText: "水果1", newestText2: "性价比最高" },
-			{ url: "/pages/detail/detail", img: "/image/s1.png", 
-				newestText: "水果2", newestText2: "性价比最高" },
-			{ url: "/pages/detail/detail", img: "/image/s1.png", 
-				newestText: "水果3", newestText2: "性价比最高" },
-			{ url: "/pages/detail/detail", img: "/image/s1.png", 
-				newestText: "水果4", newestText2: "性价比最高" }
+			{ url:"/pages/detail/detail", img: "/image/new.jpg", 
+				newestText: "新品1", newestText2: "性价比最高" },
+			{ url: "/pages/detail/detail", img: "/image/new.jpg", 
+				newestText: "新品2", newestText2: "性价比最高" },
+			{ url: "/pages/detail/detail", img: "/image/new.jpg", 
+				newestText: "新品3", newestText2: "性价比最高" },
+			{ url: "/pages/detail/detail", img: "/image/new.jpg", 
+				newestText: "新品4", newestText2: "性价比最高" }
 		]
 	}
 

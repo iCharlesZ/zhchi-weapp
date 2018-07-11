@@ -9,41 +9,41 @@ Page({
 		detail: [
 			{
 				"id": "option1",
-				"banner": "/image/list1.png",
+				"banner": "/image/new.jpg",
 				"cate": "选项1",
 				"detail": [
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"}
+					{"thumb": "/image/new.jpg","name": "水果"},
+					{"thumb": "/image/new.jpg","name": "水果"},
+					{"thumb": "/image/new.jpg","name": "水果"},
+					{"thumb": "/image/new.jpg","name": "水果"},
+					{"thumb": "/image/new.jpg","name": "水果"},
+					{"thumb": "/image/new.jpg","name": "水果"}
 				]
 			},
 			{
 				"id": "option2",
-				"banner": "/image/list1.png",
+				"banner": "/image/new.jpg",
 				"cate": "选项2",
 				"detail": [
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"}
+					{ "thumb": "/image/new.jpg", "name": "水果" },
+					{ "thumb": "/image/new.jpg", "name": "水果" },
+					{ "thumb": "/image/new.jpg", "name": "水果" },
+					{ "thumb": "/image/new.jpg", "name": "水果" },
+					{ "thumb": "/image/new.jpg", "name": "水果" },
+					{ "thumb": "/image/new.jpg", "name": "水果" }
 				]
 			},
 			{
 				"id": "option3",
-				"banner": "/image/list1.png",
+				"banner": "/image/new.jpg",
 				"cate": "选项3",
 				"detail": [
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"},
-					{"thumb": "/image/s1.png","name": "水果"}
+					{ "thumb": "/image/new.jpg", "name": "水果" },
+					{ "thumb": "/image/new.jpg", "name": "水果" },
+					{ "thumb": "/image/new.jpg", "name": "水果" },
+					{ "thumb": "/image/new.jpg", "name": "水果" },
+					{ "thumb": "/image/new.jpg", "name": "水果" },
+					{ "thumb": "/image/new.jpg", "name": "水果" }
 				]
 			}
 		],
