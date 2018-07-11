@@ -1,0 +1,31 @@
+<view class='container'>
+	<view class="search-box">
+        <input class="search-input" placeholder="搜索" value="{{value}}" focus bindinput="searchInput"/>
+        <icon class="search-icon" type="search" size="14"></icon>
+		<text class="search-btn" wx:if="{{showResult}}" bindtap="cancelSearch">取消</text>
+    </view>
+	<view class="result" wx:if="{{showResult}}">
+
+	</view>
+	<view class="init-page" wx:else>
+		<view wx:if="{{history.length > 0}}">
+            <view class="title">
+                <text>搜索记录</text>
+            </view>
+            <view class="tags">
+                <text wx:for="{{history}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle">{{item}}</text>
+            </view>
+        </view>
+        <view class="title">
+            <text>热点推荐</text>
+        </view>
+        <view class="tags">
+            <text wx:for="{{hot}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle">{{item}}</text>
+        </view>
+    </view>
+
+	<view class="keywords" wx:if="{{showKeywords}}">
+        <view class="keywords-item" wx:for="{{keywords}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle">{{item}}</view>
+    </view>
+	
+</view>

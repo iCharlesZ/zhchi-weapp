@@ -1,11 +1,13 @@
 <!--index.wxml-->
 <view class="main">
 	<view class="search-view">
-		<view class="search-content">
-			<image src="/image/search-pic.png" class="search-icon" />
-			<input placeholder="请输入搜索内容" class="search-input" />
-			<button class='search-btn' bindtap="toSearch">搜索</button>
-		</view>
+		<navigator url="/pages/search/search">
+			<view class="search-content">
+				<image src="/image/search-pic.png" class="search-icon" />
+				<input placeholder="请输入搜索内容" class="search-input" disabled='disabled'/>
+				<!-- <button class='search-btn' bindtap="toSearch">搜索</button> -->
+			</view>
+		</navigator>
 	</view>
 	<swiper 
 		class="swiper" 

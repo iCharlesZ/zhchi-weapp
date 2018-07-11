@@ -11,7 +11,8 @@
         "pages/user/user",
         "pages/category/category",
         "pages/authorize/authorize",
-		"pages/detail/detail"
+        "pages/detail/detail",
+        "pages/search/search"
     ],
     "window": {
         "backgroundTextStyle": "light",
