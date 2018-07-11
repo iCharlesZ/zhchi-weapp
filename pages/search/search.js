@@ -11,6 +11,22 @@ Page({
 	  keywords: ['水果1', '水果2', '水果3', '水果4', '水果5'],
 	  value: '',
 	  showResult: false,
+	  result: [
+		  {
+			  id: 1,
+			  url: '../detail/detail',
+			  thumb: '/image/s1.png',
+			  title: '水果',
+			  price: 0.01
+		  },
+		  {
+			  id: 2,
+			  url: '../detail/detail',
+			  thumb: '/image/s1.png',
+			  title: '水果',
+			  price: 0.02
+		  }
+	  ]
   },
 
   /**

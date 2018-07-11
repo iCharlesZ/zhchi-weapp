@@ -76,3 +76,34 @@
     color: #787878;
     font-size: 28rpx;
 }
+.result{
+    margin-top: 40rpx;
+}
+.result-box, .recommend-box{
+    padding:0 20rpx;
+}
+.result-list{
+    display: inline-block;
+    width: 325rpx;
+    height: 325rpx;
+    margin:0 20rpx 20rpx 0;
+    border-radius: 10px;
+    text-align: center;
+    background: #f5f6f5;
+}
+.result-list:nth-child(2n){
+    margin-right: 0;
+}
+.result-list image{
+    width: 175rpx;
+    height: 175rpx;
+    margin: 20rpx 0 10rpx;
+}
+.result-list .result-text{
+    font-size: 32rpx;
+}
+.null-tips{
+    padding: 200rpx 0;
+    text-align: center;
+    color: #787878;
+}
