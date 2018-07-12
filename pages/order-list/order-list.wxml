@@ -1,2 +1,3 @@
-<!--pages/order-list/order-list.wxml-->
-<text>pages/order-list/order-list.wxml</text>
+<view class='container'>
+	<text>订单管理</text>
+</view>

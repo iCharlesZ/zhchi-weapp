@@ -8,15 +8,6 @@ Page({
 	  address: {}
   },
 
-  onLoad: function (options) {
-
-  },
-
-
-  onReady: function () {
-  
-  },
-
   onShow: function () {
 	  let that = this;
 	  let userInfo = wx.getStorageSync('userInfo')

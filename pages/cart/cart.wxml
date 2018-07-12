@@ -1,6 +1,6 @@
 <import src="../../template/template-cart/template-cart.wxml"/>
 
-<view class="cart"> 
+<view class="container"> 
 	<template 
 		is="cart-list" 
 		data="{{...goodsList}}">	
