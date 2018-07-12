@@ -4,15 +4,15 @@
 		<text class="userinfo-nickname">{{nickname}}</text>
 	</view>
 	<view class="my-item">
-    	<navigator url="">地址管理</navigator>
+    	<navigator url="/pages/address/address">地址管理</navigator>
   	</view>
 	<view class="my-item">
-    	<navigator url="">订单管理</navigator>
+    	<navigator url="/pages/order-list/order-list">订单管理</navigator>
   	</view>
-	<view class="my-item">
-    	<navigator url="">关于我们</navigator>
+	<view class="my-item" bindtap="aboutUs">
+    	关于我们
   	</view>
-	<view class="my-item">
-    	<navigator url="">退出登录</navigator>
+	<view style='width: 90%; margin-top: 20rpx;'>
+    	<button type="warn">退出登录</button>
   	</view>
 </view>
