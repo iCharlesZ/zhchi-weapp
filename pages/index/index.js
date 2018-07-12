@@ -18,9 +18,9 @@ Page({
 		circular: true,
 		hotIcon: [
 			{ img: "/image/qiandao.png", text: "签到", bindtap: "signIn" },
-			{ img: "/image/quan.png", text: "礼券", bindtap: "" },
-			{ img: "/image/kanjia.png", text: "砍价", bindtap: ""},
-			{ img: "/image/zhuanlan.png", text: "专栏", bindtap: "" }
+			{ img: "/image/quan.png", text: "礼券", bindtap: "voucher" },
+			{ img: "/image/kanjia.png", text: "砍价", bindtap: "bargain"},
+			{ img: "/image/zhuanlan.png", text: "专栏", bindtap: "column" }
 		],
 		newestTitle: "最近新品",
 		newestList: [
@@ -51,6 +51,21 @@ Page({
 				duration: 2000
 			})
 		}
+	},
+	voucher: function() {
+		wx.navigateTo({
+			url: "/pages/voucher/voucher"
+		})
+	},
+	bargain: function() {
+		wx.navigateTo({
+			url: "/pages/bargain/bargain"
+		})
+	},
+	column: function() {
+		wx.navigateTo({
+			url: "/pages/column/column"
+		})
 	}
 
 })

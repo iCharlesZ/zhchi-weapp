@@ -15,7 +15,10 @@
         "pages/search/search",
         "pages/order-list/order-list",
         "pages/address/address",
-        "pages/address-add/address-add"
+        "pages/address-add/address-add",
+        "pages/voucher/voucher",
+        "pages/bargain/bargain",
+        "pages/column/column"
     ],
     "window": {
         "backgroundTextStyle": "light",
