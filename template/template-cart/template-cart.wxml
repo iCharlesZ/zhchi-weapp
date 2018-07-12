@@ -25,6 +25,13 @@
 					</view>
 				</view>
 			</view>
+			<view class="jiesuan-box">
+				<view class="left-price">
+					<view class="all-selected">全选</view>
+					<view class="total">合计：¥ 0</view>
+				</view>
+				<view class="to-pay-btn">去结算</view>
+			</view>
 		</block> 
 	</view>
 </template>
