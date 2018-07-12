@@ -20,5 +20,8 @@ Page({
 			  list: list
 		  }
 	  });
+  },
+  selectTap: function() {
+	  console.log('点击商品')
   }
 }) 

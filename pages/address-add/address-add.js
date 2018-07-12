@@ -1,4 +1,4 @@
-// pages/address/address.js
+// pages/address-add/address-add.js
 Page({
 
   /**
@@ -63,9 +63,7 @@ Page({
   onShareAppMessage: function () {
   
   },
-  addAddess: function() {
-	  wx.navigateTo({
-		  url: "/pages/address-add/address-add"
-	  })
+  bindCancel: function() {
+	  wx.navigateBack({})
   }
 })

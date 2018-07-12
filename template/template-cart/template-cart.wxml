@@ -1,13 +1,19 @@
 <template name="cart-list">
-	<view class="goodsList"> 
-		<block wx:if="{{list == 0}}">
-			 <view class="kong">
-				购物车空空如也～
-			</view> 
-		</block>
-		<block wx:else>
+
+	<block wx:if="{{list == 0}}">
+		<view class="kong">
+			购物车空空如也～
+		</view> 
+	</block>
+
+	<block wx:else>
+		<view class="list-top">
+			<view class="label">购物车 共有 {{list}} 件物品</view>
+			<view class="edit-btn">编辑</view>
+		</view>
+		<view class="goodsList">
 			<view class="a-gooods" wx:for="{{list}}" wx:key="{{index}}">
-				<view class="a-goods-conts">
+				<view class="a-goods-conts"  bindtap="selectTap" >
 					<view class="goods-info">
 						<view class="img-box">
 							<image src="/image/new.jpg" class="img"/>
@@ -32,6 +38,6 @@
 				</view>
 				<view class="to-pay-btn">去结算</view>
 			</view>
-		</block> 
-	</view>
+		</view>
+	</block>
 </template>
