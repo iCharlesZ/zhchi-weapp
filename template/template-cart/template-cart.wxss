@@ -4,7 +4,6 @@
 	margin-top: 30rpx;
 	color: #666;
 }
-
 .goodsList{
     width: 100%;
     background-color: #fff;

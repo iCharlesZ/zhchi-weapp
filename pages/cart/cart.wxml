@@ -5,4 +5,4 @@
 		is="cart-list" 
 		data="{{...goodsList}}">	
 	</template>
- </view>  
+ </view>
