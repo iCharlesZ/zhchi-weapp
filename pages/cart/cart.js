@@ -23,5 +23,14 @@ Page({
   },
   selectTap: function() {
 	  console.log('点击商品')
+  },
+  touchS: function (e) {
+	  console.log(e)
+  },
+  touchM: function (e) {
+	  console.log(e)
+  },
+  touchE: function (e) {
+	  console.log(e)
   }
 }) 
